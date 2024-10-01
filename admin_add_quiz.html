@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Quiz</title>
+    <link rel="stylesheet" href="css/admin_add_quiz.css">
+</head>
+<body>
+
+<header>
+    <a class="logo" href="admin_dashboard.html">Quizztions</a>
+</header>
+
+<div class="main-container">
+    <h2>Add New Quiz</h2>
+    <form id="add-quiz-form" action="php/add_quiz.php" method="POST">
+        <label for="quiz-title">Quiz Name:</label>
+        <input type="text" id="quiz-title" name="quiz_title" required>
+
+        <label for="num-questions">Number of Questions:</label>
+        <input type="number" id="num-questions" name="num_questions" required>
+
+        <label for="quiz-time">Quiz Time (in minutes):</label>
+        <input type="number" id="quiz-time" name="quiz_time" required>
+
+        <button type="submit">Add Quiz</button>
+    </form>
+
+    <h3>Upload Quiz Questions</h3>
+    <form id="upload-quiz-form" enctype="multipart/form-data" action="php/upload_file.php" method="POST">
+        <label for="quiz-file">Choose CSV File:</label>
+        <input type="file" id="quiz-file" name="quiz-file" accept=".csv" required>
+
+        <button type="submit">Upload File</button>
+    </form>
+
+    <div id="questions-container"></div>
+</div>
+
+    
+<footer>
+    <div>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+    </div>
+    <div>
+        © 2024 Quizztions. All rights reserved.
+    </div>
+</footer>
+
+<script src="js/admin_add_quiz.js"></script>
+</body>
+</html>

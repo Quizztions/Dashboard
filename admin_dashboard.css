@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #002f6c;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.admin-profile {
+    font-size: 1em;
+    display: flex;
+    align-items: center; /* Vertically center profile link */
+}
+
+.admin-profile a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: background 0.3s;
+}
+
+.admin-profile a:hover {
+    background-color: #1e3c72;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+.main-container {
+    padding: 80px 20px 60px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center; /* Center align the title */
+    margin-bottom: 20px;
+    color: #002f6c;
+}
+
+.module-nav {
+    margin-bottom: 20px;
+}
+
+.module {
+    margin-bottom: 30px; /* Increased space between modules */
+}
+
+.module-btn {
+    background-color: #002f6c;
+    color: #fff;
+    border: none;
+    padding: 15px 20px; /* Increased padding for better visual appeal */
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 30px; /* Increased gap between buttons */
+}
+
+.module-btn:hover {
+    background-color: #1e3c72;
+}
+
+.module-content {
+    display: none;
+    margin-top: 10px; /* Adds space between button and content */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.module-content.active {
+    display: block;
+}
+
+.submodule {
+    margin-bottom: 10px;
+}
+
+.submodule a {
+    text-decoration: none;
+    color: #002f6c;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.submodule a:hover {
+    background-color: #e6e6e6;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: #002f6c;
+    color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}

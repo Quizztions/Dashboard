@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin_manage_quizzes.css">
+    <title>Manage Quizzes</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Quizzes</h1>
+        <table id="quizzes-table">
+            <thead>
+                <tr>
+                    <th>Quiz Name</th>
+                    <th>Time Allotted</th>
+                    <th>Number of Questions</th>
+                    <th>Number of Participants</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Quiz rows will be populated here by JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Edit Quiz Modal -->
+        <div id="edit-quiz-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Quiz</h2>
+                <form id="edit-quiz-form">
+                    <input type="hidden" id="quiz-id">
+                    <label for="quiz-title">Quiz Title:</label>
+                    <input type="text" id="quiz-title" required>
+                    <label for="time-allotted">Time Allotted (in minutes):</label>
+                    <input type="number" id="time-allotted" required>
+                    <label for="num-questions">Number of Questions:</label>
+                    <input type="number" id="num-questions" required>
+                    <button type="submit">Update Quiz</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/admin_manage_quizzes.js"></script>
+</body>
+</html>

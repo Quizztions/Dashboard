@@ -1,0 +1,11 @@
+quiz_id,question_text,option_1,option_2,option_3,option_4,correct_option
+9,What is the output of print(2 ** 3)?,6,8,9,7,2
+9,Which of the following is used to define a block of code in Python language?,{},(),[],Indentation,4
+9,Which function is used to get the length of a list in Python?,len(),size(),length(),getsize(),1
+9,What is the keyword used to define a function in Python?,func,def,function,define,2
+9,What is the output of the following code: print(10 // 3)?,3.33,3,4,3.0,2
+9,Which of the following data types is immutable in Python?,list,dictionary,set,tuple,4
+9,Which operator is used to compare two values in Python?,=,==,===,<>,2
+9,Which method is used to convert a string to all lowercase in Python?,lowercase(),to_lower(),lower(),downcase(),3
+9,What is the correct way to create a list in Python?,list = {},list = [],list = (),list = {},2
+9,How do you start a comment in Python?,//,#,/*,<!--,2

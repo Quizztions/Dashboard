@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile - Quizztions</title>
+    <link rel="stylesheet" href="css/admin_profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Quizztions Admin Dashboard</div>
+        <div class="admin-profile">
+            <a href="admin_dashboard.html">Back to Dashboard</a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <h2>Admin Profile</h2>
+        
+        <!-- Profile Information Section -->
+        <section class="profile-info">
+            <h3>Profile Information</h3>
+            <form id="profile-info-form">
+                <label for="admin-name">Name:</label>
+                <input type="text" id="admin-name" name="admin-name" value="Admin Name" required>
+
+                <label for="admin-email">Email:</label>
+                <input type="email" id="admin-email" name="admin-email" value="admin@example.com" required>
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+
+        <!-- Change Password Section -->
+        <section class="change-password">
+            <h3>Change Password</h3>
+            <form id="change-password-form">
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password" name="current-password" required>
+
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+
+                <label for="confirm-new-password">Confirm New Password:</label>
+                <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+
+                <button type="submit">Change Password</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Quizztions. All rights reserved.
+    </footer>
+
+    <script src="js/admin_profile.js"></script>
+</body>
+</html>

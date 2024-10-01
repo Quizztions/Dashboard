@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz History - Quizztions</title>
+    <link rel="stylesheet" href="css/admin_dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Quizztions Admin Dashboard</div>
+    </header>
+
+    <div class="main-container">
+        <h2>Quiz History</h2>
+        <div class="stat-box">
+            <h2>Past Quizzes</h2>
+            <table class="students-table">
+                <thead>
+                    <tr>
+                        <th>Quiz Name</th>
+                        <th>Date</th>
+                        <th>Total Questions</th>
+                        <th>Participations</th>
+                    </tr>
+                </thead>
+                <tbody id="quiz-history-body">
+                    <!-- Quiz history entries will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <button id="download-report" class="button">Download Report</button>
+    </div>
+
+    <footer>
+        &copy; 2024 Quizztions. All rights reserved.
+    </footer>
+
+    <script src="js/quiz_history.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <script src="quiz.js" defer></script>  <!-- Link to the external JS file -->
+    <style>
+        /* Disable text selection */
+        body {
+            user-select: none;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.7); /* Slightly darker background */
+            backdrop-filter: blur(5px); /* Blurring the background */
+        }
+        .modal-content {
+            position: relative; 
+            margin: 10% auto; 
+            padding: 30px; 
+            width: 90%; 
+            max-width: 600px; 
+            background-color: #fff; 
+            border-radius: 10px; 
+            text-align: left; 
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Close button (cross) styling */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover, .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Start Quiz Button */
+        #start-quiz-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        #start-quiz-button:hover {
+            background-color: #218838;
+        }
+
+        /* Cancel Button */
+        #cancel-button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #cancel-button:hover {
+            background-color: #c82333;
+        }
+
+        /* Instruction list */
+        .instructions-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .instructions-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;"> <!-- Disable right-click -->
+    <header>
+        <div class="logo">Quizztions</div>
+    </header>
+
+    <div class="quiz-container">
+        <div class="timer">
+            Time Left: <span id="time-left">Loading...</span>
+        </div>
+
+        <section id="quiz-content">
+            <div class="question-container">
+                <h2 id="question-title"></h2>
+                <ul class="choices" id="choices-list"></ul>
+            </div>
+            <p id="question-count"></p>
+            <div class="status-boxes" id="status-boxes"></div>
+            <button id="previous-button" class="previous-button">Previous Question</button>
+            <button id="next-button" class="next-button">Next Question</button>
+            <button id="submit-quiz" class="submit-button">Submit Quiz</button>
+        </section>
+
+        <footer>
+            &copy; 2024 Quizztions. All rights reserved.
+        </footer>
+    </div>
+
+    <!-- Start Quiz Modal -->
+    <div id="quiz-start-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- Close button (cross) -->
+            <h2>Welcome to the Quiz!</h2>
+            <p>Please read the following rules carefully before starting the quiz:</p>
+            <ul class="instructions-list">
+                <li>The quiz will be in full-screen mode. You cannot exit full-screen during the quiz.</li>
+                <li>Switching tabs or minimizing the browser window will automatically end your quiz.</li>
+                <li>Right-clicking, printing, and copying content are disabled for the duration of the quiz.</li>
+                <li>You must answer all questions within the allotted time. Once the time is up, the quiz will be automatically submitted.</li>
+                <li>Navigation between questions is allowed. You can review and change your answers before submitting.</li>
+                <li>Do not attempt to inspect or manipulate the quiz data in any way. Such actions will disqualify your attempt.</li>
+            </ul>
+            <button id="start-quiz-button">Start Quiz</button>
+            <button id="cancel-button">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results-section" class="hidden">
+        <div class="result-container">
+            <!-- Result message and chart will be injected here -->
+        </div>
+    </div>
+</body>
+</html>

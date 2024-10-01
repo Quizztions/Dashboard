@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header class="header">
+    
+        <a class="logo" href="student_dash.php">Quizztions</a>
+      
+
+    </header>
+
+    
+
+    <div class="main-container">
+        <h2>Profile</h2>
+        
+        <!-- Profile Information Section -->
+        <section class="profile-info">
+            <h3>Profile Information</h3>
+            <form id="profile-info-form">
+                <label for="admin-name">Name:</label>
+                <input type="text" id="admin-name" name="admin-name" value="Name" required>
+
+                <label for="admin-email">Roll No</label>
+                <input type="text" id="roll-no" name="roll-no" value="2022PECAIXXX" required>
+                
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+
+        <!-- Change Password Section -->
+        <section class="change-password">
+            <h3>Change Password</h3>
+            <form id="change-password-form">
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password" name="current-password" required>
+
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+
+                <label for="confirm-new-password">Confirm New Password:</label>
+                <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+
+                <button type="submit">Change Password</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+        <div>
+            © 2024 Quizztions. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function startQuiz(quizId) {
+            window.location.href = 'quiz.html?quiz_id=' + quizId;
+        }
+
+        function viewResults() {
+            window.location.href = 'student_results.html';
+        }
+
+        function toggleMenu() {
+            const navbar = document.querySelector('.menu-container');
+            const hamburger = document.querySelector('.hamburger');
+
+            navbar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+    <script>
+    
+    </script>
+</body>
+</html>

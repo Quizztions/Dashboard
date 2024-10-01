@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .quiz-title {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .quiz-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .quiz-table th, .quiz-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .quiz-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .high-score {
+    background-color: #c8e6c9; /* >90% */
+  }
+  
+  .medium-high-score {
+    background-color: #ffecb3; /* >75% */
+  }
+  
+  .medium-score {
+    background-color: #ffe0b2; /* >50% */
+  }
+  
+  .low-score {
+    background-color: #ffccbc; /* <50% */
+  }
+  
+  .download-btn {
+    display: block;
+    margin: 15px 0;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .download-btn:hover {
+    background-color: #45a049;
+  }
+  

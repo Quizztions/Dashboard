@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Quizztions</title>
+    <link rel="stylesheet" href="css/admin_dashboard.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="../student/index.html">Quizztions</a>
+        
+    </header>
+
+    <div class="main-container">
+        <h1>Admin Dashboard</h1>
+
+        <div class="module-nav">
+            <!-- Quiz Management Module -->
+            <div class="module">
+                <button id="quiz-management-btn" class="module-btn collapsible">Quiz Management</button>
+                <div id="quiz-management-section" class="module-content">
+                    <div class="submodule"><a href="admin_add_quiz.html">Add New Quiz</a></div>
+                    <div class="submodule"><a href="admin_manage_quizzes.html">Manage Quizzes</a></div>
+                </div>
+            </div>
+
+            <!-- Student Statistics Module -->
+            <div class="module">
+                <button id="student-statistics-btn" class="module-btn collapsible">Student Statistics</button>
+                <div id="student-statistics-section" class="module-content">
+                    <div class="submodule"><a href="view_student_statistics.html">View Student Statistics</a></div>
+                </div>
+            </div>
+
+            <!-- Leaderboard Module -->
+            <div class="module">
+                <button id="leaderboard-btn" class="module-btn collapsible">Leaderboard</button>
+                <div id="leaderboard-section" class="module-content">
+                    <div class="submodule"><a href="leaderboard.html">View Leaderboard</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Quizztions. All rights reserved.
+    </footer>
+
+    <script src="js/admin_dashboard.js"></script>
+</body>
+</html>

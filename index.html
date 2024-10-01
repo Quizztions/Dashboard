@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Quizztions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0;
+            animation: fadeIn 1.5s forwards; /* Apply the fade-in effect */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0, 47, 108, 0.9);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            border-bottom: 1px solid #1e3c72;
+            transition: background 0.3s ease;
+        }
+
+        header:hover {
+            background: rgba(0, 47, 108, 1);
+        }
+
+        header .logo {
+            font-size: 2.4em;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            transition: text-shadow 0.3s ease;
+        }
+
+        header .logo:hover {
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        header .login-options a {
+            margin-left: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: 2px solid #ffffff;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header .login-options a:hover {
+            background-color: #ffffff;
+            color: #002f6c;
+            border-color: #ffffff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .welcome-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 650px;
+            width: 90%;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            margin: 60px auto;
+            color: #1e3c72;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .welcome-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .welcome-container h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            color: #1e3c72;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .welcome-container h1:hover {
+            color: #002f6c;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .welcome-container p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #333;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+
+        .welcome-container p:hover {
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #002f6c;
+            color: #fff;
+            font-size: 0.9em;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        footer:hover {
+            background: #004080;
+        }
+
+        footer a {
+            color: #e0f7fa;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .welcome-container {
+                padding: 30px 20px;
+            }
+
+            header {
+                padding: 15px 25px;
+            }
+
+            header .logo {
+                font-size: 1.8em;
+            }
+
+            header .login-options a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+
+            .welcome-container h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Quizztions</div>
+        <div class="login-options">
+            <a href="login.html" onclick="navigate(event, 'login.html')">Student Login</a>
+            <a href="admin_login.html" onclick="navigate(event, 'admin_login.html')">Admin Login</a>
+        </div>
+    </header>
+
+    <div class="welcome-container">
+        <h1>Welcome to Quizztions!</h1>
+        <p>Discover the ultimate quiz experience where curiosity meets challenge. Immerse yourself in quizzes designed to entertain, educate, and elevate your intellect.</p>
+    </div>
+
+    <footer>
+        <div>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+        <div>
+            © 2024 Quizztions. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function navigate(event, url) {
+            event.preventDefault();
+            document.body.style.opacity = '0';
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500); // Adjust this timeout to match the fade-out effect
+        }
+    </script>
+</body>
+</html>

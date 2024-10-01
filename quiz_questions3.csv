@@ -1,0 +1,11 @@
+quiz_id,question_text,option_1,option_2,option_3,option_4,correct_option
+11,"If 5x + 3 = 18, what is the value of x?",2,3,4,5,2
+11,"A car travels 120 kilometers in 2 hours. What is its speed in km/h?",50,60,70,80,2
+11,"What is the sum of the angles in a triangle?",90 degrees,180 degrees,270 degrees,360 degrees,2
+11,"If the cost of 5 apples is $3.00, what is the cost of 20 apples?",$6.00,$12.00,$15.00,$20.00,2
+11,"A train travels at a speed of 80 km/h. How far will it travel in 3 hours?",160 km,240 km,320 km,400 km,2
+11,"If a book costs $12.00 and is on a 25% discount, what is the discounted price?",$9.00,$8.00,$7.00,$10.00,1
+11,"What is the next number in the sequence 2, 4, 8, 16?",20,24,30,32,4
+11,"If a shirt is priced at $40.00 and you have a coupon for 10% off, what is the final price?",$36.00,$34.00,$32.00,$30.00,1
+11,"A rectangular garden is 10 meters long and 6 meters wide. What is its area?",60 m²,70 m²,80 m²,90 m²,1
+11,"What is the average of the numbers 5, 10, and 15?",10,15,20,25,1
